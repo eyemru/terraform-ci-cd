@@ -8,6 +8,6 @@ resource "okta_user" "demo" {
 }
 
 resource "okta_user_group_memberships" "demo_user_group" {
-  user_id  = okta_user.demo.id
-  group_ids = [okta_group.ci_cd_test.id]
+  user_id = okta_user.demo.id
+  groups  = [okta_group.ci_cd_test.id]
 }

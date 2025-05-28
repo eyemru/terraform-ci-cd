@@ -12,11 +12,11 @@ resource "okta_policy_rule_signon" "demo" {
   status    = "ACTIVE"
   priority  = 1
   network_connection = "ANYWHERE"
-  actions {
+  action {
     signon {
       access = "ALLOW"
       require_factor = false
-      session = {
+      session {
         use_persistent_cookie = false
         max_session_idle_minutes = 120
         max_session_lifetime_minutes = 480
