@@ -38,7 +38,12 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -var="okta_org_name=${{ env.OKTA_ORG_NAME }}" -var="okta_api_token=${{ env.OKTA_API_TOKEN }}" -var="okta_base_url=${{ env.OKTA_BASE_URL }}" -var="environment=${{ matrix.environment }}"
+        run: |
+          terraform apply -auto-approve \
+            -var="okta_org_name=${{ env.OKTA_ORG_NAME }}" \
+            -var="okta_base_url=${{ env.OKTA_BASE_URL }}" \
+            -var="okta_client_id=${{ env.OKTA_CLIENT_ID }}" \
+            -var="okta_private_key=${{ env.OKTA_PRIVATE_KEY }}"
 
       - name: Terraform Output
         run: terraform output
