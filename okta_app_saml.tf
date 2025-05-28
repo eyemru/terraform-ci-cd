@@ -13,5 +13,6 @@ resource "okta_app_saml" "demo" {
   digest_algorithm    = "SHA256"
   user_name_template = "user.email"
   authn_context_class_ref = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
+  authentication_policy = "rstoerlfteGx0SHpZ5d7"
   # Add more attributes as needed
 }
