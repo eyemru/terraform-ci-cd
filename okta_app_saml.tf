@@ -11,6 +11,5 @@ resource "okta_app_saml" "demo" {
   signature_algorithm = "RSA_SHA256"
   digest_algorithm    = "SHA256"
   user_name_template = "demo.user@example.com"
-  group_assignments  = [okta_group.ci_cd_test.id]
   # Add more attributes as needed
 }
