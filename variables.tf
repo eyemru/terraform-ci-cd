@@ -18,23 +18,3 @@ variable "okta_private_key" {
   type        = string
   sensitive   = true
 }
-
-variable "okta_base_url" {
-  description = "Your Okta base URL (e.g., okta.com)"
-  type        = string
-}
-
-variable "okta_client_id" {
-  description = "Okta OAuth 2.0 Client ID"
-  type        = string
-}
-
-variable "okta_private_key" {
-  description = "Okta OAuth 2.0 PEM Private Key"
-  type        = string
-  sensitive   = true
-}
-
-
-
-
