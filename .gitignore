@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# Node
+node_modules/
+
+# VSCode
+.vscode/
+
+# Pipenv
+Pipfile.lock
+
+# OS generated
+Thumbs.db
