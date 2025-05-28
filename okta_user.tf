@@ -3,9 +3,11 @@ resource "okta_user" "demo" {
   last_name  = "User"
   login      = "demo.user@example.com"
   email      = "demo.user@example.com"
-  password {
-    value = "TempPassword123!"
-  }
-  group_memberships = [okta_group.cicd_test.id]
+  password   = "TempPassword123!"
   # Optionally set "activate = false" to provision but not activate
+}
+
+resource "okta_user_group_memberships" "demo_user_group" {
+  user_id  = okta_user.demo.id
+  group_ids = [okta_group.ci_cd_test.id]
 }

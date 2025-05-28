@@ -10,7 +10,7 @@ resource "okta_app_saml" "demo" {
   assertion_signed   = true
   signature_algorithm = "RSA_SHA256"
   digest_algorithm    = "SHA256"
-  user_name_template = "${user.login}"
-  group_assignments  = [okta_group.cicd_test.id]
+  user_name_template = "${login}"
+  group_assignments  = [okta_group.ci_cd_test.id]
   # Add more attributes as needed
 }
