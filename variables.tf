@@ -18,3 +18,12 @@ variable "okta_private_key" {
   type        = string
   sensitive   = true
 }
+
+variable "okta_groups" {
+  description = "List of Okta groups to manage in bulk. Each group requires a name and description."
+  type = list(object({
+    name        = string
+    description = string
+  }))
+  default = []
+}
