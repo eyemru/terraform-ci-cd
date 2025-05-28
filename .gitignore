@@ -15,3 +15,6 @@ Pipfile.lock
 
 # OS generated
 Thumbs.db
+
+# Terraform sensitive files
+terraform.tfvars

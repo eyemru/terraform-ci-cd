@@ -1,0 +1,17 @@
+# Example terraform.tfvars for Okta provider
+# Copy to terraform.tfvars and fill in your actual values (do NOT commit secrets)
+
+okta_org_name    = "dev-82763613"          # Your Okta org shortname
+okta_base_url    = "okta.com"              # Usually "okta.com" or "oktapreview.com"
+okta_client_id   = "0oaof5ci5zIzH5Ul65d7"  # Your Okta OAuth 2.0 Client ID
+okta_private_key = <<EOF
+-----BEGIN PRIVATE KEY-----
+YOUR-PRIVATE-KEY-HERE
+-----END PRIVATE KEY-----
+EOF
+
+# Example for managed groups
+okta_groups = [
+  { name = "Developers", description = "Development team" },
+  { name = "Admins", description = "Administrators" }
+]
