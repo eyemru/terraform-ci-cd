@@ -3,7 +3,6 @@ resource "okta_policy_signon" "demo" {
   status      = "ACTIVE"
   description = "Sign-on policy for test group."
   priority    = 1
-  groups_included = [data.okta_group.ci_cd_test_new.id]
 }
 
 resource "okta_policy_rule_signon" "demo" {
