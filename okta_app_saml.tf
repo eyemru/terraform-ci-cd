@@ -6,10 +6,12 @@ resource "okta_app_saml" "demo" {
   audience           = "https://example-app.com/sso/saml/metadata"
   default_relay_state = ""
   subject_name_id_format = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+  subject_name_id_template = "demo.user@example.com"
   response_signed    = true
   assertion_signed   = true
   signature_algorithm = "RSA_SHA256"
   digest_algorithm    = "SHA256"
   user_name_template = "demo.user@example.com"
+  authn_context_class_ref = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
   # Add more attributes as needed
 }
