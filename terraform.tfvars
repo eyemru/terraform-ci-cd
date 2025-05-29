@@ -36,5 +36,5 @@ okta_groups = [
   { name = "Developers", description = "Development team" },
   { name = "Admins", description = "Administrators" },
   { name = "Admins2", description = "Administrators2" },
-  { name = "Admins2", description = "Administrators2" }
+  { name = "Admins3", description = "Administrators3" }
 ]
